@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip> // for setw
 using namespace std;
 
 int main() {
@@ -8,7 +7,7 @@ int main() {
     float percentage;
     char grade;
 
-    // Input marks for 5 subjects
+    
    
     cout << "Subject 1: ";
     cin >> marks1;
@@ -21,11 +20,11 @@ int main() {
     cout << "Subject 5: ";
     cin >> marks5;
 
-    // Calculate total and %
+    
     total = marks1 + marks2 + marks3 + marks4 + marks5;
     percentage = total / 5.0;
 
-    //  grades
+
     if (percentage >= 90)
         grade = 'A';
     else if (percentage >= 80)
@@ -41,23 +40,24 @@ int main() {
 
     //  report card
     cout << "\n=========== REPORT CARD ===========\n";
-    cout << setw(20) << left << "Subject 1:" << marks1 << endl;
-    cout << setw(20) << left << "Subject 2:" << marks2 << endl;
-    cout << setw(20) << left << "Subject 3:" << marks3 << endl;
-    cout << setw(20) << left << "Subject 4:" << marks4 << endl;
-    cout << setw(20) << left << "Subject 5:" << marks5 << endl;
-    cout << setw(20) << left << "Total Marks:" << total << endl;
-    cout << setw(20) << left << "Percentage:" << percentage << "%" << endl;
-    cout << setw(20) << left << "Grade:" << grade << endl;
+    cout<<setw(20)<<left<<"Subject 1:" << marks1<<endl;
+    cout<<setw(20)<<left<<"Subject 2:" << marks2<<endl;
+    cout<<setw(20)<<left<<"Subject 3:" <<marks3<<endl;
+    cout<<setw(20)<<left<<"Subject 4:" <<marks4<<endl;
+    cout<<setw(20)<<left<<"Subject 5:" <<marks5<<endl;
+    cout<<setw(20)<<left<<"Total Marks:" <<total<<endl;
+    cout<<setw(20)<<left<<"Percentage:" <<percentage<<"%"<<endl;
+    cout<<setw(20)<<left<<"Grade:" << grade<<endl;
 
-    //  check pass/fail
-    string result = (percentage >= 50) ? "Pass" : "Fail";
-    cout << setw(20) << left << "Result:" << result << endl;
+    
+    string result= (percentage >= 50) ? "Pass" : "Fail";
+    cout<<setw(20)<<left<<"Result:"<<result<<endl;
 
-    cout << "===================================\n";
+  
 
     return 0;
 }
+
 
 
 
